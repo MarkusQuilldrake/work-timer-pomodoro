@@ -52,48 +52,56 @@ export default {
                 this.currentTimeString = this.toHHMMSS(this.currentTime - 0).substring(3, 8) + ' of 20:00 Work';
                 return null;
             }
+            if(parseInt(this.currentTime) == 1200) this.sound.play();
             //Block 2 : 05 : 1500
             if(parseInt(this.currentTime) < 1500){
-                this.activeBlock = 0;
+                this.activeBlock = 1;
                 this.currentTimeString = this.toHHMMSS(this.currentTime - 1200).substring(3, 8) + ' of 05:00 Rest';
                 return null;
             }
+            if(parseInt(this.currentTime) == 1500) this.sound.play();
             //Block 3 : 20 : 2700
             if(parseInt(this.currentTime) < 2700){
-                this.activeBlock = 0;
+                this.activeBlock = 2;
                 this.currentTimeString = this.toHHMMSS(this.currentTime - 1500).substring(3, 8) + ' of 20:00 Work';
                 return null;
             }
+            if(parseInt(this.currentTime) == 2700) this.sound.play();
             //Block 4 : 05 : 3000
             if(parseInt(this.currentTime) < 3000){
-                this.activeBlock = 0;
+                this.activeBlock = 3;
                 this.currentTimeString = this.toHHMMSS(this.currentTime - 2700).substring(3, 8) + ' of 05:00 Rest';
                 return null;
             }
+            if(parseInt(this.currentTime) == 3000) this.sound.play();
             //Block 5 : 20 : 4200
             if(parseInt(this.currentTime) < 4200){
-                this.activeBlock = 0;
+                this.activeBlock = 4;
                 this.currentTimeString = this.toHHMMSS(this.currentTime - 3000).substring(3, 8) + ' of 20:00 Work';
                 return null;
             }
+            if(parseInt(this.currentTime) == 4200) this.sound.play();
             //Block 6 : 05 : 4500
             if(parseInt(this.currentTime) < 4500){
-                this.activeBlock = 0;
+                this.activeBlock = 5;
                 this.currentTimeString = this.toHHMMSS(this.currentTime - 4200).substring(3, 8) + ' of 05:00 Rest';
                 return null;
             }
+            if(parseInt(this.currentTime) == 4500) this.sound.play();
             //Block 7 : 20 : 5700
             if(parseInt(this.currentTime) < 5700){
-                this.activeBlock = 0;
+                this.activeBlock = 6;
                 this.currentTimeString = this.toHHMMSS(this.currentTime - 4500).substring(3, 8) + ' of 20:00 Work';
                 return null;
             }
+            if(parseInt(this.currentTime) == 5700) this.sound.play();
             //Block 8 : 25 : 7200
             if(parseInt(this.currentTime) < 7200){
-                this.activeBlock = 0;
+                this.activeBlock = 7;
                 this.currentTimeString = this.toHHMMSS(this.currentTime - 5700).substring(3, 8) + ' of 25:00 Rest';
                 return null;
             }
+            if(parseInt(this.currentTime) == 7200) this.sound.play();
             if(parseInt(this.currentTime) >= 7200){
                 alert("Micro Sprint is done. Reset Timer to start again.");
                 this.STOP();
